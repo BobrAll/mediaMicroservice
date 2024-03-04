@@ -1,6 +1,6 @@
-package bobr.blps_lab.image;
+package bobr.mediamicroservice.image;
 
-import bobr.blps_lab.realty.flat.Flat;
+import bobr.mediamicroservice.realty.flat.Flat;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -17,14 +17,13 @@ public class Base64Image {
     @GeneratedValue
     private Integer id;
 
-    @ManyToOne(cascade = CascadeType.ALL)
-    private Flat flat;
+    private Integer flatId;
 
     @Column(columnDefinition = "TEXT")
     private String base64Image;
 
-    public Base64Image(String base64Image, Flat flat) {
+    public Base64Image(String base64Image, Integer flatId) {
         this.base64Image = base64Image;
-        this.flat = flat;
+        this.flatId = flatId;
     }
 }

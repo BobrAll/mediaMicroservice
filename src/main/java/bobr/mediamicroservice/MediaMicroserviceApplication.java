@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class MediaMicroserviceApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(MediaMicroserviceApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(MediaMicroserviceApplication.class, args);
+    }
 
 }
